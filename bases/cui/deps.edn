@@ -1,0 +1,5 @@
+{:paths ["src/main" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.12.0"}}
+ :mvn/repos {"cognitect-dev-tools" {:url "https://dev-tools.cognitect.com/maven/releases"}}
+ :aliases {:test {:extra-paths ["test"]
+                  :extra-deps {}}}}

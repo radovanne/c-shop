@@ -1,0 +1,14 @@
+{:deps {:aliases [:cljs]}
+ :nrepl {:port 9000
+         :middleware [cider.nrepl/cider-middleware cider.piggieback/wrap-cljs-repl]}
+ :dev-http {3001 "../../bases/cui/resources/public"}
+ :builds {:main {:target :browser
+                 :output-dir "../../bases/cui/resources/public/js"
+                 :asset-path "/js"
+
+                 #_#_:js-options {:js-package-dirs ["node_modules" "../../bases/cui/src/js/components"]}
+
+                 :modules {:main {:init-fn app.client/init}}
+
+                 :release {:compiler-options {:output-feature-set :es-next
+                                              :optimizations :advanced}}}}}
